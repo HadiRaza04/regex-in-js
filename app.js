@@ -25,8 +25,20 @@ console.log(ourStr.match(ourRegex));          // ["expressions"]
 
 // 5) Fifth topic: Multiple searchesusing global //gi Method
 let twinkleStar = "Twinkle, twinkle, little star";
-let starRegex = /Twinkle/gi; // Change this line
+let starRegex = /Twinkle/gi;
 console.log(twinkleStar.match(starRegex));       // ['Twinkle', 'twinkle']
+
+// 6) Sixth topic: Matched anything with Wildcard Period (.)
+let exampleStr = "Let's have fun with regular expressions!";
+let unRegex = /ru.|su.|fu.|pu.|nu./; 
+console.log(unRegex.test(exampleStr));           // true
+
+
+// 7) Seventh topic: Match Single Character with Multiple Possibilities
+let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+let vowelRegex = /[aeiou]/gi;
+console.log(quoteSample.match(vowelRegex)); // 25[a, e, i, o, u, a, i ................]
+
 
 
 
